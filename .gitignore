@@ -1,0 +1,13 @@
+# Python & Virtual Environments
+.venv/
+__pycache__/
+*.pyc
+
+# Tool Caches
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# Governance Package Guards (Keep real packages out of repo)
+*review-package*
+*REVIEW-RETURN*

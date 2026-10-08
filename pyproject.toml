@@ -1,0 +1,34 @@
+[project]
+name = "irep"
+version = "0.1.0"
+description = "Interactive Review & Evidence Pipeline"
+license = "AGPL-3.0-only"
+readme = "README.md"
+authors = [
+    { name = "bertrand-elias", email = "bertrand-elias@natifdev.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "typer>=0.12.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "ruff>=0.3.0",
+    "mypy>=1.8.0",
+]
+
+[project.scripts]
+irep = "irep.cli:app"
+
+[build-system]
+requires = ["hatchling>=1.21.0"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/irep"]
+
+[tool.mypy]
+strict = true
+packages = ["irep"]
